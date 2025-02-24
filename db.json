@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Multivitamin kompleksi",
+    "style": "It va mushuklar uchun kuchaytiruvchi vitaminlar",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHS7hv0swre5mJJ9YzBWFC-27Cca3GuqpDrbYre0gqUq1jMjfZVgFWLp0sq6Hg4SO6WQ&usqp=CAU",
+    "onSale": true,
+    "description": {
+      "price": 25000,
+      "discount": 5000,
+      "description": "Hayvonlar immunitetini oshiruvchi muhim vitaminlar"
+    }
+  },
+  {
+    "name": "ImmunoBoost",
+    "style": "Mushuk va itlar uchun immunitet ko'taruvchi vosita",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH4I2ikaONGnNZQUfjV25gxXyDkqyoqFr0tw&s",
+    "onSale": false,
+    "description": {
+      "price": 40000,
+      "discount": 0,
+      "description": "Infeksiyalarga qarshi chidamlilikni oshiruvchi dori"
+    }
+  },
+  {
+    "name": "Antiparazit tomchilar",
+    "style": "Pashsha va bitlarga qarshi tomchilar",
+    "image": "https://images.uzum.uz/cjrf6gsjvf2hdh3eou1g/original.jpg",
+    "onSale": true,
+    "description": {
+      "price": 30000,
+      "discount": 5000,
+      "description": "Teriga surtiladigan va 30 kun himoya qiluvchi tomchi"
+    }
+  },
+  {
+    "name": "Dermacure",
+    "style": "Hayvonlarning teri kasalliklari uchun malham",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNTjcihnTa4gKXTwhdPmbCLUlq1oHBeqOYlg&s",
+    "onSale": false,
+    "description": {
+      "price": 20000,
+      "discount": 0,
+      "description": "Egzema, qichish va qo'ziqorinlarga qarshi malham"
+    }
+  },
+  {
+    "name": "OralCare",
+    "style": "Hayvonlarning tish sog'lig'i uchun maxsus gel",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpOTz7BiyApzoKn981LUdjQYTNLE1SHppfSQ&s",
+    "onSale": true,
+    "description": {
+      "price": 15000,
+      "discount": 3000,
+      "description": "Tish toshlari va yomon hidga qarshi gel"
+    }
+  },
+  {
+    "name": "AntiWorm",
+    "style": "Ichak qurtlariga qarshi samarali tabletka",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV3xSsLSa1bm4rQSSKkJEQUqKVRuO90coysw&s",
+    "onSale": false,
+    "description": {
+      "price": 35000,
+      "discount": 0,
+      "description": "Ichak parazitlarini yo'qotish uchun maxsus preparat"
+    }
+  },
+  {
+    "name": "EnergoPet",
+    "style": "Hayvonlar uchun energiya beruvchi qo'shimcha ozuqa",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhhSLuVo6gdD2YTsPvTupDmoxpVdkkl047IA&s",
+    "onSale": true,
+    "description": {
+      "price": 50000,
+      "discount": 10000,
+      "description": "Jismoniy faollikni oshiruvchi va charchoqqa qarshi vosita"
+    }
+  },
+  {
+    "name": "HepaVet",
+    "style": "Jigar sog'lig'ini mustahkamlash uchun dori",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmKvzIrX0i4bTCKctrrkqstvpK07-nNIHa6PfLTHXWunn5C-DpzvFSU1r9eelPT8vqzdA&usqp=CAU",
+    "onSale": false,
+    "description": {
+      "price": 45000,
+      "discount": 0,
+      "description": "Jigar faoliyatini yaxshilovchi tabiiy vosita"
+    }
+  },
+  {
+    "name": "ArthroPet",
+    "style": "Hayvonlar uchun bo'g'im va suyak sog'lig'ini mustahkamlovchi qo'shimcha",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAompr1UvXqV70evvyVpAIoRDGWpu1y7TGfA&s",
+    "onSale": true,
+    "description": {
+      "price": 60000,
+      "discount": 12000,
+      "description": "Yosh hayvonlar va keksalar uchun bo'g'im mustahkamlovchi"
+    }
+  },
+  {
+    "name": "RelaxVet",
+    "style": "Hayvonlarning stress va xavotirni kamaytiruvchi vosita",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRch7a2UuNV265nqp84vOFmU5pshwXzYymOMA&s",
+    "onSale": false,
+    "description": {
+      "price": 32000,
+      "discount": 0,
+      "description": "Veterinarlar tomonidan tavsiya etilgan tinchlantiruvchi dori"
+    }
+  },
+  {
+    "name": "PetMilk",
+    "style": "Hayvon bolalari uchun maxsus sut o'rnini bosuvchi aralashma",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-kZEJ4DNMmvRHUhNouq2uWhyCuQjkk39fhQ&s",
+    "onSale": true,
+    "description": {
+      "price": 28000,
+      "discount": 4000,
+      "description": "Ona suti yetishmovchiligi uchun tabiiy ozuqa"
+    }
+  },
+  {
+    "name": "BioProtect",
+    "style": "Ichak mikroflorasini yaxshilovchi probiotik",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQluoB925fRml89QI5wVi87-QRBIkujgIwZBg&s",
+    "onSale": false,
+    "description": {
+      "price": 50000,
+      "discount": 0,
+      "description": "Oshqozon-ichak tizimi muammolarini bartaraf etuvchi vosita"
+    }
+  },
+  {
+    "name": "VetDrops",
+    "style": "Hayvonlarning quloq va ko'zlarini muhofaza qiluvchi dori",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3MGrbwBQWGGfzCIfxuIP_uX5GAM5JmOAu6g&s",
+    "onSale": true,
+    "description": {
+      "price": 18000,
+      "discount": 3000,
+      "description": "Quloq va ko'zlar uchun muhofaza qiluvchi dori"
+    }
+  },
+  {
+    "name": "PetShampoo",
+    "style": "Hayvonlar uchun teri va sochlarni tozalovchi shampun",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaQ2IKnXLqddCPs8oAxdmglkn3YLG6ZUdYNQ&s",
+    "onSale": false,
+    "description": {
+      "price": 25000,
+      "discount": 0,
+      "description": "Teri va sochlarni tozalovchi va yaxshilovchi shampun"
+    }
+  },
+  {
+    "name": "PetSpray",
+    "style": "Hayvonlar uchun teri va sochlarni tozalovchi spreyy",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmCYDw4iLw116zwBKp3obr8ZhrrAc7X0fpA&s",
+    "onSale": true,
+    "description": {
+      "price": 30000,
+      "discount": 5000,
+      "description": "Teri va sochlarni tozalovchi va yaxshilovchi spreyy"
+    }
+  },
+  {
+    "name": "PetWipes",
+    "style": "Hayvonlar uchun teri va sochlarni tozalovchi servetka",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Z25wmA9SLHFhh1Lp8F-qHzn2MTQSrbtORg&s",
+    "onSale": false,
+    "description": {
+      "price": 20000,
+      "discount": 0,
+      "description": "Teri va sochlarni tozalovchi va yaxshilovchi servetka"
+    }
+  }
+]
