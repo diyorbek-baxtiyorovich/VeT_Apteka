@@ -1,7 +1,5 @@
 <template>
-  <div class="korzinka">
-    <h1>Korzinka</h1>
-  </div>
+  <div class="korzinka"></div>
 </template>
 <script>
 export default {};

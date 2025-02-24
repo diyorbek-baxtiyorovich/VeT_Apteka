@@ -2,9 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import DefaultLayout from "@/layout/DefaultLayout.vue";
 import HomeView from "@/pages/HomeView.vue";
 import ContactView from "@/pages/ContactView.vue";
-import ProductsView from "@/pages/ProductsView.vue";
 import AboutView from "@/pages/AboutView.vue";
-// import NotFound from "@/pages/NotFound.vue"; // NotFound sahifasi
+import ProductsView from "@/pages/ProductsView.vue";
+import ProductInfoView from "@/pages/ProductInfoView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,38 +13,18 @@ const router = createRouter({
       path: "/",
       component: DefaultLayout,
       children: [
+        { path: "", name: "home", component: HomeView },
+        { path: "contact", name: "contact", component: ContactView },
+        { path: "about", name: "about", component: AboutView },
+        { path: "products", name: "products", component: ProductsView },
         {
-          path: "",
-          name: "home",
-          component: HomeView,
-        },
-        {
-          path: "contact",
-          name: "contact",
-          component: ContactView,
-        },
-        {
-          path: "products",
-          name: "products",
-          component: ProductsView,
-        },
-        {
-          path: "about",
-          name: "about",
-          component: AboutView,
-        },
-        {
-          path: "korzinka",
-          name: "korzinka",
-          component: () => import("@/pages/KorzinkaView.vue"),
+          path: "product/:id",
+          name: "productInfo",
+          component: ProductInfoView,
+          props: true,
         },
       ],
     },
-    // {
-    //   path: "/:pathMatch(.*)*",
-    //   name: "NotFound",
-    //   component: NotFound,
-    // },
   ],
 });
 
