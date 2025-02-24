@@ -1,11 +1,11 @@
 <template>
   <div class="product-list">
-    <div v-if="products.length === 0" class="no-products">
-      Найдено 0 товаров
+    <div v-if="paginatedProducts.length === 0" class="no-products">
+      Elementlar topilmadi
     </div>
     <div v-else class="grid grid-cols-4 gap-4">
       <div
-        v-for="(product, index) in products"
+        v-for="(product, index) in paginatedProducts"
         :key="index"
         class="product-card"
       >
@@ -37,6 +37,45 @@
         </button>
       </div>
     </div>
+    <nav v-if="totalPages > 1" class="mt-4 flex justify-end">
+      <ul class="flex">
+        <li>
+          <button
+            class="page-link rounded-lg px-4 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
+            :class="{ 'opacity-50 cursor-not-allowed': currentPage === 1 }"
+            @click="prevPage"
+            :disabled="currentPage === 1"
+          >
+            Previous
+          </button>
+        </li>
+        <li v-for="page in totalPages" :key="page" class="page-item">
+          <button
+            class="page-link px-4 py-2 border rounded-lg transition"
+            :class="{
+              'bg-blue-500 text-white border-blue-500': currentPage === page,
+              'bg-gray-100 text-gray-700 hover:bg-gray-200':
+                currentPage !== page,
+            }"
+            @click="setPage(page)"
+          >
+            {{ page }}
+          </button>
+        </li>
+        <li>
+          <button
+            class="page-link rounded-lg px-4 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
+            :class="{
+              'opacity-50 cursor-not-allowed': currentPage === totalPages,
+            }"
+            @click="nextPage"
+            :disabled="currentPage === totalPages"
+          >
+            Next
+          </button>
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
@@ -44,11 +83,25 @@
 export default {
   props: {
     products: Array,
+    itemsPerPage: {
+      type: Number,
+      default: 8,
+    },
   },
   data() {
     return {
+      currentPage: 1,
       productCounts: {},
     };
+  },
+  computed: {
+    totalPages() {
+      return Math.ceil(this.products.length / this.itemsPerPage);
+    },
+    paginatedProducts() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      return this.products.slice(start, start + this.itemsPerPage);
+    },
   },
   methods: {
     formattedPrice(product) {
@@ -82,11 +135,24 @@ export default {
         count: this.productCounts[index] || 1,
       });
     },
+    prevPage() {
+      if (this.currentPage > 1) {
+        this.currentPage--;
+      }
+    },
+    nextPage() {
+      if (this.currentPage < this.totalPages) {
+        this.currentPage++;
+      }
+    },
+    setPage(page) {
+      this.currentPage = page;
+    },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .product-list {
   width: 75%;
   background: #fff;
@@ -131,5 +197,25 @@ export default {
 
 .btn-add:hover {
   background: #388e3c;
+}
+.page-link {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.page-link:hover {
+  transform: scale(1.05);
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+}
+
+.page-item.disabled .page-link {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 </style>
