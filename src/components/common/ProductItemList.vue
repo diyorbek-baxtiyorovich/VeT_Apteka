@@ -11,9 +11,18 @@
       >
         <img :src="product.image" :alt="product.name" class="product-img" />
         <router-link :to="`/product/${product.id}`">
-          <h2 class="text-lg font-semibold mt-2">{{ product.name }}</h2>
+          <h2
+            class="text-lg font-semibold mt-2 hover:text-blue-500 cursor-pointer"
+          >
+            {{ product.name }}
+          </h2>
         </router-link>
-        <p class="text-gray-500">{{ product.description.description }}</p>
+        <p class="text-gray-500">
+          {{
+            product.description.description.slice(0, 50) +
+            (product.description.description.length > 50 ? "..." : "")
+          }}
+        </p>
         <p class="text-gray-700 font-bold mt-2">
           {{ formattedPrice(product) }}
         </p>

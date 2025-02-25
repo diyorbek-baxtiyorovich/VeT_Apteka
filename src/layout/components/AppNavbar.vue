@@ -73,7 +73,7 @@ export default {
   name: "AppNavbar",
 };
 </script>
-<style>
+<style scoped>
 ul li:hover {
   color: white;
 }
