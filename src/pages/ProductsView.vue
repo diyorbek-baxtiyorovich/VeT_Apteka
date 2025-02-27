@@ -7,69 +7,59 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, computed, onMounted } from "vue";
+import { useCartStore } from "@/stores/counter";
 import Filters from "@/components/common/ProductItemFilter.vue";
 import ProductList from "@/components/common/ProductItemList.vue";
 
-export default {
-  name: "ProductsView",
-  components: {
-    Filters,
-    ProductList,
-  },
-  data() {
-    return {
-      products: [],
-      filters: {
-        priceMin: 0,
-        priceMax: 100000,
-        manufacturer: "",
-        volume: "",
-      },
-    };
-  },
-  computed: {
-    categorizedProducts() {
-      const uniqueProducts = this.products.reduce((acc, item) => {
-        if (!acc.find((p) => p.name === item.name)) {
-          acc.push(item);
-        }
-        return acc;
-      }, []);
+const cartStore = useCartStore();
+const products = ref([]);
+const filters = ref({
+  priceMin: 0,
+  priceMax: 100000,
+  manufacturer: "",
+  volume: "",
+});
 
-      return uniqueProducts.filter((product) => {
-        const finalPrice =
-          product.description.price - (product.description.discount || 0);
-        return (
-          finalPrice >= this.filters.priceMin &&
-          finalPrice <= this.filters.priceMax &&
-          (this.filters.manufacturer
-            ? product.manufacturer?.includes(this.filters.manufacturer)
-            : true) &&
-          (this.filters.volume ? product.volume === this.filters.volume : true)
-        );
-      });
-    },
-  },
-  methods: {
-    updateFilters(newFilters) {
-      this.filters = newFilters;
-    },
-    addToCart({ product, count }) {
-      this.$store.dispatch("addToCart", { product, count });
-    },
-  },
-  mounted() {
-    fetch("/db.json")
-      .then((response) => response.json())
-      .then((data) => {
-        this.products = data;
-      })
-      .catch((error) => console.error("Error loading products:", error));
+const categorizedProducts = computed(() => {
+  const uniqueProducts = products.value.reduce((acc, item) => {
+    if (!acc.find((p) => p.name === item.name)) {
+      acc.push(item);
+    }
+    return acc;
+  }, []);
 
-    console.log("Route params:", this.$route.params); // Bu yerda `id` kelayotganini tekshiramiz
-  },
+  return uniqueProducts.filter((product) => {
+    const finalPrice =
+      product.description.price - (product.description.discount || 0);
+    return (
+      finalPrice >= filters.value.priceMin &&
+      finalPrice <= filters.value.priceMax &&
+      (filters.value.manufacturer
+        ? product.manufacturer?.includes(filters.value.manufacturer)
+        : true) &&
+      (filters.value.volume ? product.volume === filters.value.volume : true)
+    );
+  });
+});
+
+const updateFilters = (newFilters) => {
+  filters.value = newFilters;
 };
+
+const addToCart = ({ product, count }) => {
+  cartStore.addToCart(product, count);
+};
+
+onMounted(() => {
+  fetch("/db.json")
+    .then((response) => response.json())
+    .then((data) => {
+      products.value = data;
+    })
+    .catch((error) => console.error("Error loading products:", error));
+});
 </script>
 
 <style scoped>

@@ -16,18 +16,18 @@
           </p>
           <div class="flex justify-start items-center">
             <div>
-              <button class="btn" @click="addToCart">
+              <button class="btn" @click="addToCart()">
                 Korzinkaga qo'shish
               </button>
             </div>
             <div class="counter ml-2">
-              <button @click="decreaseCount" class="minus-btn">
+              <button @click="decreaseCount()" class="minus-btn">
                 <i class="fa-solid fa-minus"></i>
               </button>
               <span class="text-xl font-semibold mx-4 w-8 text-center">
                 {{ getCount }}
               </span>
-              <button @click="increaseCount" class="plus-btn">
+              <button @click="increaseCount()" class="plus-btn">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>
@@ -41,60 +41,49 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import { useCartStore } from "@/stores/counter";
 
-export default {
-  data() {
-    return {
-      product: null,
-      products: [],
-      cartStore: useCartStore(), // Pinia store
-      route: useRoute(),
-    };
-  },
-  computed: {
-    formattedPrice() {
-      if (!this.product) return "";
-      const finalPrice =
-        this.product.description.price -
-        (this.product.description.discount || 0);
-      return `${finalPrice} сум`;
-    },
-    getCount() {
-      const item = this.cartStore.cart.find(
-        (item) => item.id === this.product?.id
-      );
-      return item ? item.count : 0;
-    },
-  },
-  methods: {
-    increaseCount() {
-      this.cartStore.addToCart(this.product, 1);
-    },
-    decreaseCount() {
-      this.cartStore.removeFromCart(this.product.id);
-    },
-    addToCart() {
-      this.cartStore.addToCart(this.product, 1);
-    },
-    async fetchProduct() {
-      try {
-        const response = await fetch("/db.json");
-        const data = await response.json();
-        this.products = data;
-        this.product = this.products.find((p) => p.id == this.route.params.id);
-        console.log("Mahsulot topilmadi:", this.product);
-      } catch (error) {
-        console.error("Mahsulotni yuklashda xatolik:", error);
-      }
-    },
-  },
-  mounted() {
-    this.fetchProduct();
-  },
+const product = ref(null);
+const products = ref([]);
+const cartStore = useCartStore();
+const route = useRoute();
+
+const formattedPrice = computed(() => {
+  if (!product.value) return "";
+  const finalPrice =
+    product.value.description.price - (product.value.description.discount || 0);
+  return `${finalPrice} сум`;
+});
+
+const getCount = computed(() => {
+  const item = cartStore.cart.find((item) => item.id === product.value?.id);
+  return item ? item.count : 0;
+});
+
+const increaseCount = () => {
+  cartStore.addToCart(product.value, 1);
 };
+
+const decreaseCount = () => {
+  cartStore.removeFromCart(product.value.id);
+};
+
+const fetchProduct = async () => {
+  try {
+    const response = await fetch("/db.json");
+    const data = await response.json();
+    products.value = data;
+    product.value = products.value.find((p) => p.id == route.params.id);
+    console.log("Mahsulot topilmadi:", product.value);
+  } catch (error) {
+    console.error("Mahsulotni yuklashda xatolik:", error);
+  }
+};
+
+onMounted(fetchProduct);
 </script>
 
 <style>
