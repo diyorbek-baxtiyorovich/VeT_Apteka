@@ -5,10 +5,17 @@
     "style": "It va mushuklar uchun kuchaytiruvchi vitaminlar",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHS7hv0swre5mJJ9YzBWFC-27Cca3GuqpDrbYre0gqUq1jMjfZVgFWLp0sq6Hg4SO6WQ&usqp=CAU",
     "onSale": true,
+    "category": "Vitaminlar",
+    "weight": "100g",
+    "manufacturer": "VetHealth",
+    "country_of_origin": "AQSh",
+    "usage": "Kuniga 1-2 marta ovqat bilan birga berish tavsiya etiladi.",
+    "ingredients": ["Vitamin A", "Vitamin C", "Omega-3", "Minerallar"],
+    "storage_conditions": "Quruq va salqin joyda saqlang.",
     "description": {
       "price": 25000,
       "discount": 5000,
-      "description": "Hayvonlar immunitetini oshiruvchi muhim vitaminlar kompleksi Hayvonlar immunitetini oshiruvchi muhim vitaminlar kompleksiHayvonlar immunitetini oshiruvchi muhim vitaminlar kompleksiHayvonlar immunitetini oshiruvchi muhim vitaminlar kompleksiHayvonlar immunitetini oshiruvchi muhim vitaminlar kompleksi"
+      "description": "Hayvonlar immunitetini oshiruvchi muhim vitaminlar kompleksi."
     }
   },
   {
@@ -17,10 +24,17 @@
     "style": "Mushuk va itlar uchun immunitet ko'taruvchi vosita",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH4I2ikaONGnNZQUfjV25gxXyDkqyoqFr0tw&s",
     "onSale": false,
+    "category": "Immunitetni oshirish",
+    "weight": "120ml",
+    "manufacturer": "PetLife",
+    "country_of_origin": "Germaniya",
+    "usage": "Kuniga 2 marta, hayvonning vazniga qarab tomchilab berish.",
+    "ingredients": ["Beta-glukan", "Vitamin E", "Selen"],
+    "storage_conditions": "Yorug‘likdan himoyalangan joyda saqlash kerak.",
     "description": {
       "price": 40000,
       "discount": 0,
-      "description": "Infeksiyalarga qarshi chidamlilikni oshiruvchi dori"
+      "description": "Infeksiyalarga qarshi chidamlilikni oshiruvchi dori."
     }
   },
   {
@@ -29,10 +43,17 @@
     "style": "Pashsha va bitlarga qarshi tomchilar",
     "image": "https://images.uzum.uz/cjrf6gsjvf2hdh3eou1g/original.jpg",
     "onSale": true,
+    "category": "Parazitlarga qarshi",
+    "weight": "50ml",
+    "manufacturer": "BioVet",
+    "country_of_origin": "Fransiya",
+    "usage": "Tomchilarni hayvonning orqa qismiga surtish kerak.",
+    "ingredients": ["Fipronil", "Permetrin", "Vitamin B6"],
+    "storage_conditions": "Sovuq joyda, bolalar yeta olmaydigan joyda saqlang.",
     "description": {
       "price": 30000,
       "discount": 5000,
-      "description": "Teriga surtiladigan va 30 kun himoya qiluvchi tomchi"
+      "description": "Teriga surtiladigan va 30 kun himoya qiluvchi tomchi."
     }
   },
   {
@@ -41,10 +62,17 @@
     "style": "Hayvonlarning teri kasalliklari uchun malham",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNTjcihnTa4gKXTwhdPmbCLUlq1oHBeqOYlg&s",
     "onSale": false,
+    "category": "Teri kasalliklari",
+    "weight": "75g",
+    "manufacturer": "SkinPet",
+    "country_of_origin": "Italiya",
+    "usage": "Kuniga 2 marta teriga surish tavsiya etiladi.",
+    "ingredients": ["Aloe Vera", "Sink", "E vitamini"],
+    "storage_conditions": "Issiqdan himoyalangan joyda saqlash kerak.",
     "description": {
       "price": 20000,
       "discount": 0,
-      "description": "Egzema, qichish va qo'ziqorinlarga qarshi malham"
+      "description": "Egzema, qichish va qo'ziqorinlarga qarshi malham."
     }
   },
   {
@@ -53,142 +81,17 @@
     "style": "Hayvonlarning tish sog'lig'i uchun maxsus gel",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpOTz7BiyApzoKn981LUdjQYTNLE1SHppfSQ&s",
     "onSale": true,
+    "category": "Og'iz bo'shlig'i parvarishi",
+    "weight": "60ml",
+    "manufacturer": "DentVet",
+    "country_of_origin": "Kanada",
+    "usage": "Kuniga bir marta tishlarga surtiladi.",
+    "ingredients": ["Xlorheksidin", "Fluorid", "Propolis"],
+    "storage_conditions": "Sovuq joyda saqlash tavsiya etiladi.",
     "description": {
       "price": 15000,
       "discount": 3000,
-      "description": "Tish toshlari va yomon hidga qarshi gel"
-    }
-  },
-  {
-    "id": 6,
-    "name": "AntiWorm",
-    "style": "Ichak qurtlariga qarshi samarali tabletka",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV3xSsLSa1bm4rQSSKkJEQUqKVRuO90coysw&s",
-    "onSale": false,
-    "description": {
-      "price": 35000,
-      "discount": 0,
-      "description": "Ichak parazitlarini yo'qotish uchun maxsus preparat"
-    }
-  },
-  {
-    "id": 7,
-    "name": "EnergoPet",
-    "style": "Hayvonlar uchun energiya beruvchi qo'shimcha ozuqa",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhhSLuVo6gdD2YTsPvTupDmoxpVdkkl047IA&s",
-    "onSale": true,
-    "description": {
-      "price": 50000,
-      "discount": 10000,
-      "description": "Jismoniy faollikni oshiruvchi va charchoqqa qarshi vosita"
-    }
-  },
-  {
-    "id": 8,
-    "name": "HepaVet",
-    "style": "Jigar sog'lig'ini mustahkamlash uchun dori",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmKvzIrX0i4bTCKctrrkqstvpK07-nNIHa6PfLTHXWunn5C-DpzvFSU1r9eelPT8vqzdA&usqp=CAU",
-    "onSale": false,
-    "description": {
-      "price": 45000,
-      "discount": 0,
-      "description": "Jigar faoliyatini yaxshilovchi tabiiy vosita"
-    }
-  },
-  {
-    "id": 9,
-    "name": "ArthroPet",
-    "style": "Hayvonlar uchun bo'g'im va suyak sog'lig'ini mustahkamlovchi qo'shimcha",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAompr1UvXqV70evvyVpAIoRDGWpu1y7TGfA&s",
-    "onSale": true,
-    "description": {
-      "price": 60000,
-      "discount": 12000,
-      "description": "Yosh hayvonlar va keksalar uchun bo'g'im mustahkamlovchi"
-    }
-  },
-  {
-    "id": 10,
-    "name": "RelaxVet",
-    "style": "Hayvonlarning stress va xavotirni kamaytiruvchi vosita",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRch7a2UuNV265nqp84vOFmU5pshwXzYymOMA&s",
-    "onSale": false,
-    "description": {
-      "price": 32000,
-      "discount": 0,
-      "description": "Veterinarlar tomonidan tavsiya etilgan tinchlantiruvchi dori"
-    }
-  },
-  {
-    "id": 11,
-    "name": "PetMilk",
-    "style": "Hayvon bolalari uchun maxsus sut o'rnini bosuvchi aralashma",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-kZEJ4DNMmvRHUhNouq2uWhyCuQjkk39fhQ&s",
-    "onSale": true,
-    "description": {
-      "price": 28000,
-      "discount": 4000,
-      "description": "Ona suti yetishmovchiligi uchun tabiiy ozuqa"
-    }
-  },
-  {
-    "id": 12,
-    "name": "BioProtect",
-    "style": "Ichak mikroflorasini yaxshilovchi probiotik",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQluoB925fRml89QI5wVi87-QRBIkujgIwZBg&s",
-    "onSale": false,
-    "description": {
-      "price": 50000,
-      "discount": 0,
-      "description": "Oshqozon-ichak tizimi muammolarini bartaraf etuvchi vosita"
-    }
-  },
-  {
-    "id": 13,
-    "name": "VetDrops",
-    "style": "Hayvonlarning quloq va ko'zlarini muhofaza qiluvchi dori",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3MGrbwBQWGGfzCIfxuIP_uX5GAM5JmOAu6g&s",
-    "onSale": true,
-    "description": {
-      "price": 18000,
-      "discount": 3000,
-      "description": "Quloq va ko'zlar uchun muhofaza qiluvchi dori"
-    }
-  },
-  {
-    "id": 14,
-    "name": "PetShampoo",
-    "style": "Hayvonlar uchun teri va sochlarni tozalovchi shampun",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaQ2IKnXLqddCPs8oAxdmglkn3YLG6ZUdYNQ&s",
-    "onSale": false,
-    "description": {
-      "price": 25000,
-      "discount": 0,
-      "description": "Teri va sochlarni tozalovchi va yaxshilovchi shampun"
-    }
-  },
-  {
-    "id": 15,
-    "name": "PetSpray",
-    "style": "Hayvonlar uchun teri va sochlarni tozalovchi spreyy",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmCYDw4iLw116zwBKp3obr8ZhrrAc7X0fpA&s",
-    "onSale": true,
-    "description": {
-      "price": 30000,
-      "discount": 5000,
-      "description": "Teri va sochlarni tozalovchi va yaxshilovchi spreyy"
-    }
-  },
-  {
-    "id": 16,
-    "name": "PetWipes",
-    "style": "Hayvonlar uchun teri va sochlarni tozalovchi servetka",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Z25wmA9SLHFhh1Lp8F-qHzn2MTQSrbtORg&s",
-    "onSale": false,
-    "description": {
-      "price": 20000,
-      "discount": 0,
-      "description": "Teri va sochlarni tozalovchi va yaxshilovchi servetka"
+      "description": "Tish toshlari va yomon hidga qarshi gel."
     }
   }
 ]

@@ -23,20 +23,17 @@
             (product.description.description.length > 50 ? "..." : "")
           }}
         </p>
-        <p class="text-gray-700 font-bold mt-2">
-          {{ formattedPrice(product) }}
-        </p>
-
+        <p class="mt-2" v-html="formattedPrice(product)"></p>
         <div class="flex justify-center mt-4">
           <div class="flex items-center bg-gray-100 p-2 rounded-xl shadow-md">
             <button @click="decreaseCount(index)" class="cursor-pointer">
-              <i class="fa-solid fa-minus"></i>
+              <i class="fa-solid fa-minus text-red-500"></i>
             </button>
             <span class="text-xl font-semibold mx-4 w-8 text-center">
               {{ getCount(index) }}
             </span>
             <button @click="increaseCount(index)" class="cursor-pointer">
-              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-plus text-green-600"></i>
             </button>
           </div>
         </div>
@@ -88,76 +85,87 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    products: Array,
-    itemsPerPage: {
-      type: Number,
-      default: 8,
-    },
+<script setup>
+import { ref, computed } from "vue";
+
+const props = defineProps({
+  products: Array,
+  itemsPerPage: {
+    type: Number,
+    default: 8,
   },
-  data() {
-    return {
-      currentPage: 1,
-      productCounts: {},
-    };
-  },
-  computed: {
-    totalPages() {
-      return Math.ceil(this.products.length / this.itemsPerPage);
-    },
-    paginatedProducts() {
-      const start = (this.currentPage - 1) * this.itemsPerPage;
-      return this.products.slice(start, start + this.itemsPerPage);
-    },
-  },
-  methods: {
-    formattedPrice(product) {
-      const finalPrice =
-        product.description.price - (product.description.discount || 0);
-      return product.description.discount
-        ? `${finalPrice} сум (Чегирма)`
-        : `${product.description.price} сум`;
-    },
-    increaseCount(index) {
-      if (!this.productCounts[index]) {
-        this.productCounts[index] = 1;
-      } else {
-        this.productCounts[index]++;
-      }
-      this.productCounts = { ...this.productCounts };
-    },
-    decreaseCount(index) {
-      if (this.productCounts[index] && this.productCounts[index] > 1) {
-        this.productCounts[index]--;
-      } else {
-        this.$delete(this.productCounts, index);
-      }
-    },
-    getCount(index) {
-      return this.productCounts[index] || 0;
-    },
-    addToCart(product, index) {
-      this.$emit("add-to-cart", {
-        product,
-        count: this.productCounts[index] || 1,
-      });
-    },
-    prevPage() {
-      if (this.currentPage > 1) {
-        this.currentPage--;
-      }
-    },
-    nextPage() {
-      if (this.currentPage < this.totalPages) {
-        this.currentPage++;
-      }
-    },
-    setPage(page) {
-      this.currentPage = page;
-    },
-  },
+});
+
+const emit = defineEmits(["add-to-cart"]);
+
+const currentPage = ref(1);
+const productCounts = ref({});
+
+const totalPages = computed(() => {
+  return Math.ceil(props.products.length / props.itemsPerPage);
+});
+
+const paginatedProducts = computed(() => {
+  const start = (currentPage.value - 1) * props.itemsPerPage;
+  return props.products.slice(start, start + props.itemsPerPage);
+});
+
+const formattedPrice = (product) => {
+  const finalPrice =
+    product.description.price - (product.description.discount || 0);
+
+  if (product.description.discount > 0) {
+    return `
+      <span class="text-red-500 line-through">${product.description.price} so'm</span>
+      <span class="text-green-700 font-bold ml-2">${finalPrice} so'm (Chegirma)</span>
+    `;
+  } else {
+    return `<span class="text-green-700 font-bold">${product.description.price} so'm</span>`;
+  }
+};
+
+const increaseCount = (index) => {
+  if (!productCounts.value[index]) {
+    productCounts.value[index] = 1;
+  } else {
+    productCounts.value[index]++;
+  }
+  productCounts.value = { ...productCounts.value };
+};
+
+const decreaseCount = (index) => {
+  if (productCounts.value[index] && productCounts.value[index] > 1) {
+    productCounts.value[index]--;
+  } else {
+    delete productCounts.value[index];
+  }
+};
+
+const getCount = (index) => {
+  return productCounts.value[index] || 0;
+};
+
+const addToCart = (product, index) => {
+  emit("add-to-cart", {
+    product,
+    count: productCounts.value[index] || 1,
+  });
+};
+
+const prevPage = () => {
+  if (currentPage.value > 1) {
+    currentPage.value--;
+  }
+};
+
+const nextPage = () => {
+  if (currentPage.value < totalPages.value) {
+    currentPage.value++;
+  }
+};
+
+const setPage = (page) => {
+  currentPage.value = page;
 };
 </script>
 
