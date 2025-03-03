@@ -8,11 +8,7 @@
           over-the-counter medications. We are dedicated to providing you with
           the best products and services to meet your needs.
         </p>
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Get Started
-        </button>
+        <button class="btn">Get Started</button>
       </div>
     </div>
     <div class="bacColor"></div>

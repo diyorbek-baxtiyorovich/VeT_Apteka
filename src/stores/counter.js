@@ -7,7 +7,6 @@ export const useCartStore = defineStore("cart", () => {
   const cartCount = computed(() =>
     cart.value.reduce((total, item) => total + item.count, 0)
   );
-
   function addToCart(product, count = 1) {
     const existingItem = cart.value.find((item) => item.id === product.id);
     if (existingItem) {

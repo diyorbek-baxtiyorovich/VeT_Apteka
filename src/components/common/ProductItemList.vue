@@ -64,6 +64,7 @@
                 currentPage !== page,
             }"
             @click="setPage(page)"
+            :disabled="currentPage === page"
           >
             {{ page }}
           </button>

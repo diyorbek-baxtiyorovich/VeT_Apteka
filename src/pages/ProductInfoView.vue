@@ -68,7 +68,6 @@ const getCount = computed(() => {
   return item ? item.count : 0;
 });
 
-// Funksiyalar
 const increaseCount = () => {
   cartStore.addToCart(product.value, 1);
 };
@@ -81,7 +80,6 @@ const addToCart = () => {
   cartStore.addToCart(product.value, 1);
 };
 
-// Mahsulotni olish
 const fetchProduct = async () => {
   try {
     const response = await fetch("/db.json");
