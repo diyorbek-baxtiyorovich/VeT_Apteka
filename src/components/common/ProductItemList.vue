@@ -25,7 +25,7 @@
         </p>
         <p class="mt-2" v-html="formattedPrice(product)"></p>
         <div class="flex justify-center mt-4">
-          <div class="flex items-center bg-gray-100 p-2 rounded-xl shadow-md">
+          <div class="flex items-center bg-gray-100 p-5 rounded-xl shadow-md">
             <button @click="decreaseCount(index)" class="cursor-pointer">
               <i class="fa-solid fa-minus text-red-500"></i>
             </button>

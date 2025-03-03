@@ -1,6 +1,6 @@
 <template>
   <div class="navbar-wrapper">
-    <nav class="bg-gray-800 text-white p-4 flex justify-between px-10">
+    <nav class="bg-gray-800 text-white p-4 flex justify-between px-10 py-3">
       <h1 class="text-3xl font-bold">
         <router-link to="/">Pharmacy</router-link>
       </h1>

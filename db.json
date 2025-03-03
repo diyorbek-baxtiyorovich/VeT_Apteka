@@ -1,97 +1,382 @@
 [
   {
     "id": 1,
-    "name": "Multivitamin kompleksi",
-    "style": "It va mushuklar uchun kuchaytiruvchi vitaminlar",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHS7hv0swre5mJJ9YzBWFC-27Cca3GuqpDrbYre0gqUq1jMjfZVgFWLp0sq6Hg4SO6WQ&usqp=CAU",
+    "name": "JIN GU WANG",
+    "style": "Bullen",
+    "image": "http://dummyimage.com/233x100.png/cc0000/ffffff",
     "onSale": true,
-    "category": "Vitaminlar",
-    "weight": "100g",
-    "manufacturer": "VetHealth",
-    "country_of_origin": "AQSh",
-    "usage": "Kuniga 1-2 marta ovqat bilan birga berish tavsiya etiladi.",
-    "ingredients": ["Vitamin A", "Vitamin C", "Omega-3", "Minerallar"],
-    "storage_conditions": "Quruq va salqin joyda saqlang.",
+    "category": "Roofing (Asphalt)",
+    "weight": "100ml",
+    "manufacturer": "Photobug",
+    "country_of_origin": "Venezuela",
+    "usage": "Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.",
+    "ingredients": "Vitamin B6",
+    "storage_conditions": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus.",
     "description": {
-      "price": 25000,
-      "discount": 5000,
-      "description": "Hayvonlar immunitetini oshiruvchi muhim vitaminlar kompleksi."
+      "price": 66083,
+      "discount": 0,
+      "description": "Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum."
     }
   },
   {
     "id": 2,
-    "name": "ImmunoBoost",
-    "style": "Mushuk va itlar uchun immunitet ko'taruvchi vosita",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH4I2ikaONGnNZQUfjV25gxXyDkqyoqFr0tw&s",
-    "onSale": false,
-    "category": "Immunitetni oshirish",
-    "weight": "120ml",
-    "manufacturer": "PetLife",
-    "country_of_origin": "Germaniya",
-    "usage": "Kuniga 2 marta, hayvonning vazniga qarab tomchilab berish.",
-    "ingredients": ["Beta-glukan", "Vitamin E", "Selen"],
-    "storage_conditions": "Yorug‘likdan himoyalangan joyda saqlash kerak.",
+    "name": "CLE DE PEAU BEAUTE REFINING FLUID FOUNDATION",
+    "style": "Fieldstone",
+    "image": "http://dummyimage.com/220x100.png/ff4444/ffffff",
+    "onSale": true,
+    "category": "Electrical and Fire Alarm",
+    "weight": "50ml",
+    "manufacturer": "Buzzster",
+    "country_of_origin": "Armenia",
+    "usage": "Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue.",
+    "ingredients": "Permetrin",
+    "storage_conditions": "Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius.",
     "description": {
-      "price": 40000,
-      "discount": 0,
-      "description": "Infeksiyalarga qarshi chidamlilikni oshiruvchi dori."
+      "price": 35944,
+      "discount": 4867,
+      "description": "Nullam varius."
     }
   },
   {
     "id": 3,
-    "name": "Antiparazit tomchilar",
-    "style": "Pashsha va bitlarga qarshi tomchilar",
-    "image": "https://images.uzum.uz/cjrf6gsjvf2hdh3eou1g/original.jpg",
+    "name": "Health Care Personnel Handwash",
+    "style": "Kiera",
+    "image": "http://dummyimage.com/116x100.png/cc0000/ffffff",
     "onSale": true,
-    "category": "Parazitlarga qarshi",
-    "weight": "50ml",
-    "manufacturer": "BioVet",
-    "country_of_origin": "Fransiya",
-    "usage": "Tomchilarni hayvonning orqa qismiga surtish kerak.",
-    "ingredients": ["Fipronil", "Permetrin", "Vitamin B6"],
-    "storage_conditions": "Sovuq joyda, bolalar yeta olmaydigan joyda saqlang.",
+    "category": "Fire Protection",
+    "weight": "100ml",
+    "manufacturer": "Meejo",
+    "country_of_origin": "Serbia",
+    "usage": "In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst.",
+    "ingredients": "Permetrin",
+    "storage_conditions": "Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh.",
     "description": {
-      "price": 30000,
-      "discount": 5000,
-      "description": "Teriga surtiladigan va 30 kun himoya qiluvchi tomchi."
+      "price": 48066,
+      "discount": 3279,
+      "description": "Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum."
     }
   },
   {
     "id": 4,
-    "name": "Dermacure",
-    "style": "Hayvonlarning teri kasalliklari uchun malham",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNTjcihnTa4gKXTwhdPmbCLUlq1oHBeqOYlg&s",
+    "name": "Envirostat",
+    "style": "Grzegorecki",
+    "image": "http://dummyimage.com/146x100.png/cc0000/ffffff",
     "onSale": false,
-    "category": "Teri kasalliklari",
-    "weight": "75g",
-    "manufacturer": "SkinPet",
-    "country_of_origin": "Italiya",
-    "usage": "Kuniga 2 marta teriga surish tavsiya etiladi.",
-    "ingredients": ["Aloe Vera", "Sink", "E vitamini"],
-    "storage_conditions": "Issiqdan himoyalangan joyda saqlash kerak.",
+    "category": "Glass & Glazing",
+    "weight": "150ml",
+    "manufacturer": "Shufflester",
+    "country_of_origin": "Portugal",
+    "usage": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.",
+    "ingredients": "Vitamin B6",
+    "storage_conditions": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.",
     "description": {
-      "price": 20000,
-      "discount": 0,
-      "description": "Egzema, qichish va qo'ziqorinlarga qarshi malham."
+      "price": 99080,
+      "discount": 4300,
+      "description": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros."
     }
   },
   {
     "id": 5,
-    "name": "OralCare",
-    "style": "Hayvonlarning tish sog'lig'i uchun maxsus gel",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpOTz7BiyApzoKn981LUdjQYTNLE1SHppfSQ&s",
+    "name": "Wart Freee",
+    "style": "Fewings",
+    "image": "http://dummyimage.com/246x100.png/cc0000/ffffff",
     "onSale": true,
-    "category": "Og'iz bo'shlig'i parvarishi",
-    "weight": "60ml",
-    "manufacturer": "DentVet",
-    "country_of_origin": "Kanada",
-    "usage": "Kuniga bir marta tishlarga surtiladi.",
-    "ingredients": ["Xlorheksidin", "Fluorid", "Propolis"],
-    "storage_conditions": "Sovuq joyda saqlash tavsiya etiladi.",
+    "category": "Masonry & Precast",
+    "weight": "100ml",
+    "manufacturer": "Kwinu",
+    "country_of_origin": "Nigeria",
+    "usage": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.",
+    "ingredients": "Permetrin",
+    "storage_conditions": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum.",
     "description": {
-      "price": 15000,
-      "discount": 3000,
-      "description": "Tish toshlari va yomon hidga qarshi gel."
+      "price": 17177,
+      "discount": 3341,
+      "description": "Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla."
+    }
+  },
+  {
+    "id": 6,
+    "name": "Octreotide Acetate",
+    "style": "Flinders",
+    "image": "http://dummyimage.com/226x100.png/ff4444/ffffff",
+    "onSale": true,
+    "category": "Roofing (Asphalt)",
+    "weight": "150ml",
+    "manufacturer": "Twimm",
+    "country_of_origin": "Indonesia",
+    "usage": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl.",
+    "ingredients": "Permetrin",
+    "storage_conditions": "Morbi porttitor lorem id ligula.",
+    "description": {
+      "price": 44793,
+      "discount": 4005,
+      "description": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti."
+    }
+  },
+  {
+    "id": 7,
+    "name": "Cyclobenzaprine Hydrochloride",
+    "style": "Wabey",
+    "image": "http://dummyimage.com/222x100.png/cc0000/ffffff",
+    "onSale": false,
+    "category": "Masonry",
+    "weight": "50ml",
+    "manufacturer": "Devify",
+    "country_of_origin": "Moldova",
+    "usage": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
+    "ingredients": "Vitamin B6",
+    "storage_conditions ": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.",
+    "description": {
+      "price": 11791,
+      "discount": 329,
+      "description": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat."
+    }
+  },
+  {
+    "id": 8,
+    "name": "Chantix",
+    "style": "Swigger",
+    "image": "http://dummyimage.com/191x100.png/cc0000/ffffff",
+    "onSale": false,
+    "category": "Soft Flooring and Base",
+    "weight": "100ml",
+    "manufacturer": "Quaxo",
+    "country_of_origin": "Croatia",
+    "usage ": "In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius.",
+    "ingredients ": "Vitamin B6",
+    "storage_conditions": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.",
+    "description": {
+      "price": 59904,
+      "discount": 2459,
+      "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl."
+    }
+  },
+  {
+    "id": 9,
+    "name": "Naproxen",
+    "style": "Croke",
+    "image": "http://dummyimage.com/154x100.png/ff4444/ffffff",
+    "onSale": true,
+    "category": "Structural & Misc Steel Erection",
+    "weight": "50ml",
+    "manufacturer": "Bubbletube",
+    "country_of_origin": "Bangladesh",
+    "usage": "Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+    "ingredients": "Vitamin B6",
+    "storage_conditions": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
+    "description": {
+      "price": 14609,
+      "discount": 1757,
+      "description": "Fusce posuere felis sed lacus."
+    }
+  },
+  {
+    "id": 10,
+    "name": "Meclofenamate Sodium",
+    "style": "Goode",
+    "image": "http://dummyimage.com/123x100.png/cc0000/ffffff",
+    "onSale": true,
+    "category": "Masonry & Precast",
+    "weight": "100ml",
+    "manufacturer": "Rhynyx",
+    "country_of_origin": "Pakistan",
+    "usage": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
+    "ingredients": "Vitamin B6",
+    "storage_conditions": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue.",
+    "description": {
+      "price": 81383,
+      "discount": 791,
+      "description": "Nulla nisl."
+    }
+  },
+  {
+    "id": 11,
+    "name": "Oxygen",
+    "style": "McGlynn",
+    "image": "http://dummyimage.com/144x100.png/cc0000/ffffff",
+    "onSale": true,
+    "category": "Landscaping & Irrigation",
+    "weight": "100ml",
+    "manufacturer ": "Tambee",
+    "country_of_origin": "China",
+    "usage": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor.",
+    "ingredients": "Vitamin B6",
+    "storage_conditions": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
+    "description": {
+      "price": 75944,
+      "discount": 789,
+      "description": "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
+    }
+  },
+  {
+    "id": 12,
+    "name": "PR Benzoyl Peroxide Wash",
+    "style": "Palk",
+    "image": "http://dummyimage.com/194x100.png/cc0000/ffffff",
+    "onSale": false,
+    "category": "Termite Control",
+    "weight ": "50ml",
+    "manufacturer": "Bubblebox",
+    "country_of_origin": "Lithuania",
+    "usage": "Nulla mollis molestie lorem. Quisque ut erat.",
+    "ingredients": "Fipronil",
+    "storage_conditions ": "Ut at dolor quis odio consequat varius. Integer ac leo.",
+    "description": {
+      "price": 59970,
+      "discount": 427,
+      "description": "Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst."
+    }
+  },
+  {
+    "id": 13,
+    "name": "Vitamins A and D Ointment",
+    "style": "Longmate",
+    "image": "http://dummyimage.com/190x100.png/ff4444/ffffff",
+    "onSale": false,
+    "category": "Glass & Glazing",
+    "weight": "150ml",
+    "manufacturer": "Riffpedia",
+    "country_of_origin": "Norway",
+    "usage": "Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.",
+    "ingredients": "Permetrin",
+    "storage_conditions": "Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
+    "description": {
+      "price": 41485,
+      "discount": 2861,
+      "description": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."
+    }
+  },
+  {
+    "id": 14,
+    "name": "Amlodipine Besylate",
+    "style": "Roads",
+    "image": "http://dummyimage.com/140x100.png/cc0000/ffffff",
+    "onSale": false,
+    "category": "Masonry",
+    "weight": "50ml",
+    "manufacturer": "Brightbean",
+    "country_of_origin": "China",
+    "usage": "Vestibulum ac est lacinia nisi venenatis tristique.",
+    "ingredients": "Fipronil",
+    "storage_conditions": "Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum.",
+    "description": {
+      "price": 86120,
+      "discount": 1511,
+      "description": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc."
+    }
+  },
+  {
+    "id": 15,
+    "name": "SENNAGEN",
+    "style": "Ritter",
+    "image": "http://dummyimage.com/141x100.png/dddddd/000000",
+    "onSale": false,
+    "category": "Prefabricated Aluminum Metal Canopies",
+    "weight": "50ml",
+    "manufacturer": "Gabtune",
+    "country_of_origin": "China",
+    "usage": "Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
+    "ingredients": "Fipronil",
+    "storage_conditions": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl.",
+    "description": {
+      "price": 17284,
+      "discount": 819,
+      "description": "Quisque id justo sit amet sapien dignissim vestibulum."
+    }
+  },
+  {
+    "id": 16,
+    "name": "NAMICO ANTISEPTIC HAND CLEANER 557",
+    "style": "Cuthbert",
+    "image": "http://dummyimage.com/229x100.png/cc0000/ffffff",
+    "onSale": false,
+    "category": "Rebar & Wire Mesh Install",
+    "weight": "150ml",
+    "manufacturer": "Fivebridge",
+    "country_of_origin": "China",
+    "usage": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "ingredients": "Vitamin B6",
+    "storage_conditions": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+    "description": {
+      "price": 80885,
+      "discount": 3759,
+      "description": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui."
+    }
+  },
+  {
+    "id": 17,
+    "name": "Lyrica",
+    "style": "Overland",
+    "image": "http://dummyimage.com/231x100.png/5fa2dd/ffffff",
+    "onSale": false,
+    "category": "Rebar & Wire Mesh Install",
+    "weight": "100ml",
+    "manufacturer": "Mybuzz",
+    "country_of_origin": "Colombia",
+    "usage": "Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio.",
+    "ingredients": "Permetrin",
+    "storage_conditions": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.",
+    "description": {
+      "price": 22184,
+      "discount": 4370,
+      "description": "Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue."
+    }
+  },
+  {
+    "id": 18,
+    "name": "White Mulberry",
+    "style": "Mollison",
+    "image": "http://dummyimage.com/176x100.png/cc0000/ffffff",
+    "onSale": false,
+    "category": "Asphalt Paving",
+    "weight": "50ml",
+    "manufacturer": "Skinder",
+    "country_of_origin": "China",
+    "usage": "Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis.",
+    "ingredients": "Permetrin",
+    "storage_conditions": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+    "description": {
+      "price": 48586,
+      "discount": 2823,
+      "description": "Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem."
+    }
+  },
+  {
+    "id": 19,
+    "name": "Striant",
+    "style": "Barrand",
+    "image": "http://dummyimage.com/124x100.png/5fa2dd/ffffff",
+    "onSale": true,
+    "category": "Landscaping & Irrigation",
+    "weight": "100ml",
+    "manufacturer": "Thoughtstorm",
+    "country_of_origin": "Kyrgyzstan",
+    "usage": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+    "ingredients": "Fipronil",
+    "storage_conditions": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis.",
+    "description": {
+      "price": 54028,
+      "discount": 0,
+      "description": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus."
+    }
+  },
+  {
+    "id": 20,
+    "name": "Cladribine",
+    "style": "Hudless",
+    "image": "http://dummyimage.com/141x100.png/5fa2dd/ffffff",
+    "onSale": true,
+    "category": "Wall Protection",
+    "weight": "100ml",
+    "manufacturer": "Realblab",
+    "country_of_origin": "Indonesia",
+    "usage": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi.",
+    "ingredients": "Vitamin B6",
+    "storage_conditions": "Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum.",
+    "description": {
+      "price": 66052,
+      "discount": 1134,
+      "description": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl."
     }
   }
 ]
