@@ -58,7 +58,7 @@ onMounted(() => {
     .then((data) => {
       products.value = data;
     })
-    .catch((error) => console.error("Error loading products:", error));
+    .catch((error) => console.error("Error loading product:", error));
 });
 </script>
 

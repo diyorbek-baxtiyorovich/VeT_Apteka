@@ -4,7 +4,6 @@
       <h1 class="text-3xl font-bold">
         <router-link to="/">Pharmacy</router-link>
       </h1>
-
       <ul
         class="hidden md:flex space-x-6 text-lg font-semibold uppercase tracking-widest"
       >
@@ -23,9 +22,7 @@
           >
         </li>
       </ul>
-
       <ul class="flex space-x-6 items-center text-lg font-semibold">
-        <!-- Cart Icon -->
         <li class="relative">
           <router-link to="/cart" class="relative">
             <i class="fas fa-shopping-cart text-2xl"></i>
