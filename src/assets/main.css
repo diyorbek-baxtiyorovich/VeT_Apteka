@@ -3,6 +3,3 @@
   box-sizing: border-box;
   font-family: "Roboto Condensed", serif;
 }
-@import "~sweetalert2/src/variables";
-
-@import "~sweetalert2/src/sweetalert2";

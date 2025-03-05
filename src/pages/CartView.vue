@@ -20,7 +20,12 @@
 
             <div class="flex-1 ml-4">
               <h2 class="text-lg font-semibold">{{ item.name }}</h2>
-              <p class="text-sm text-gray-500">{{ item.description }}</p>
+              <p class="text-sm text-gray-500">
+                {{
+                  item.description.slice(0, 50) +
+                  (item.description.length > 50 ? "..." : "")
+                }}
+              </p>
               <p class="text-lg font-bold text-red-600">
                 {{ item.discountedPrice }} so'm
                 <span class="text-gray-400 line-through"
@@ -112,7 +117,7 @@ const totalDiscount = computed(() =>
 );
 const totalPayable = computed(() => totalMRP.value - totalDiscount.value);
 const deliveryCharge = computed(() =>
-  totalPayable.value > 50000 ? "Free" : "20000 so'm"
+  totalPayable.value > 55000 ? "Free" : "25000 so'm"
 );
 </script>
 

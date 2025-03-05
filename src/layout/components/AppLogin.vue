@@ -5,30 +5,70 @@
         <div class="content">
           <h2>Sign In</h2>
 
-          <div class="form">
+          <form class="form" @submit.prevent="handleLogin">
             <div class="inputBox">
-              <input type="text" required /> <i>Username</i>
+              <input v-model="username" type="text" required />
+              <i>Username</i>
             </div>
             <div class="inputBox">
-              <input type="password" required /> <i>Password</i>
+              <input v-model="password" type="password" required />
+              <i>Password</i>
             </div>
             <div class="links">
-              <a href="#">Forgot Password</a> <a href="#">Signup</a>
+              <a href="#">Forgot Password</a>
+              <router-link to="/register">Signup</router-link>
             </div>
             <div class="inputBox">
               <input type="submit" value="Login" />
             </div>
-          </div>
+          </form>
+          <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
         </div>
       </div>
     </section>
   </div>
 </template>
-<script>
-export default {};
+
+<script setup>
+import { ref } from "vue";
+import { useUserStore } from "@/stores/user";
+import { useRouter } from "vue-router";
+
+const userStore = useUserStore();
+const router = useRouter();
+
+const username = ref("");
+const password = ref("");
+const errorMessage = ref("");
+
+const handleLogin = () => {
+  const storedUser = JSON.parse(localStorage.getItem("user"));
+
+  if (!storedUser) {
+    errorMessage.value = "User not found. Please register first.";
+    return;
+  }
+
+  if (
+    username.value === storedUser.name &&
+    password.value === storedUser.password
+  ) {
+    userStore.login(storedUser);
+    router.push("/");
+  } else {
+    errorMessage.value = "Invalid username or password.";
+  }
+};
 </script>
+
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
 
 section {
   width: 100%;

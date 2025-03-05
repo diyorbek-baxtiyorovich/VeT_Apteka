@@ -1,38 +1,107 @@
 <template>
   <div class="wrapper">
     <h2>Registration</h2>
-    <form action="#">
+    <form @submit.prevent="registerUser">
       <div class="input-box">
-        <input type="text" placeholder="Enter your name" required />
+        <input
+          type="text"
+          v-model="name"
+          placeholder="Enter your name"
+          required
+        />
       </div>
       <div class="input-box">
-        <input type="text" placeholder="Enter your email" required />
+        <input
+          type="email"
+          v-model="email"
+          placeholder="Enter your email"
+          required
+        />
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Create password" required />
+        <input
+          type="password"
+          v-model="password"
+          placeholder="Create password"
+          required
+        />
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Confirm password" required />
+        <input
+          type="password"
+          v-model="confirmPassword"
+          placeholder="Confirm password"
+          required
+        />
+        <p v-if="passwordMismatch" class="error">Passwords do not match</p>
       </div>
       <div class="policy">
-        <input type="checkbox" />
-        <h3>I accept all terms & condition</h3>
+        <input type="checkbox" v-model="acceptedTerms" />
+        <h3>I accept all terms & conditions</h3>
       </div>
       <div class="input-box button">
-        <input type="Submit" value="Register Now" />
+        <input type="submit" value="Register Now" :disabled="!canSubmit" />
       </div>
       <div class="text">
-        <h3>Already have an account? <a href="#">Login now</a></h3>
+        <h3>
+          Already have an account?
+          <router-link to="/login">Login now</router-link>
+        </h3>
       </div>
     </form>
   </div>
 </template>
-<script>
-export default {};
+
+<script setup>
+import { ref, computed } from "vue";
+import { useUserStore } from "@/stores/user";
+import { useRouter } from "vue-router";
+
+const name = ref("");
+const email = ref("");
+const password = ref("");
+const confirmPassword = ref("");
+const acceptedTerms = ref(false);
+const userStore = useUserStore();
+const router = useRouter();
+
+const passwordMismatch = computed(
+  () => password.value !== confirmPassword.value
+);
+
+const canSubmit = computed(
+  () =>
+    name.value &&
+    email.value &&
+    password.value &&
+    !passwordMismatch.value &&
+    acceptedTerms.value
+);
+
+const registerUser = () => {
+  if (!canSubmit.value) return;
+
+  const userData = {
+    name: name.value,
+    email: email.value,
+    password: password.value,
+    avatar: "https://www.w3schools.com/howto/img_avatar.png",
+  };
+
+  localStorage.setItem("user", JSON.stringify(userData));
+
+  userStore.login(userData);
+  router.push("/");
+};
 </script>
+
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
 .wrapper {
   margin: 80px auto;
   position: relative;
