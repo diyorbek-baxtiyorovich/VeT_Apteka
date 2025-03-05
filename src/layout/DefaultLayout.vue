@@ -1,20 +1,10 @@
 <template>
   <div>
     <AppNavbar />
-    <RouterView />
+    <router-view />
   </div>
 </template>
 
-<script>
+<script setup>
 import AppNavbar from "@/layout/components/AppNavbar.vue";
-import { RouterView } from "vue-router";
-
-export default {
-  components: {
-    AppNavbar,
-    RouterView,
-  },
-};
 </script>
-
-<style scoped></style>

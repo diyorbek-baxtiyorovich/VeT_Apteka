@@ -1,5 +1,5 @@
 <template>
-  <div class="product-list">
+  <div class="product-list" v-if="products.length > 0">
     <div v-if="paginatedProducts.length === 0" class="no-products">
       Elementlar topilmadi
     </div>
@@ -26,19 +26,18 @@
         <p class="mt-2" v-html="formattedPrice(product)"></p>
         <div class="flex justify-center mt-4">
           <div class="flex items-center bg-gray-100 p-5 rounded-xl shadow-md">
-            <button @click="decreaseCount(index)" class="cursor-pointer">
+            <button @click="decreaseCount(product.id)" class="cursor-pointer">
               <i class="fa-solid fa-minus text-red-500"></i>
             </button>
             <span class="text-xl font-semibold mx-4 w-8 text-center">
-              {{ getCount(index) }}
+              {{ getCount(product.id) }}
             </span>
-            <button @click="increaseCount(index)" class="cursor-pointer">
+            <button @click="increaseCount(product.id)" class="cursor-pointer">
               <i class="fa-solid fa-plus text-green-600"></i>
             </button>
           </div>
         </div>
-
-        <button @click="addToCart(product, index)" class="btn-add">
+        <button @click="addToCart(product)" class="btn-add">
           Korzinkaga qo'shish
         </button>
       </div>
@@ -84,10 +83,13 @@
       </ul>
     </nav>
   </div>
+  <div v-else>Ma'lumot yo'q</div>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
+
+import Swal from "sweetalert2";
 
 const props = defineProps({
   products: Array,
@@ -98,9 +100,17 @@ const props = defineProps({
 });
 
 const emit = defineEmits(["add-to-cart"]);
-
 const currentPage = ref(1);
 const productCounts = ref({});
+
+const loadCartFromStorage = () => {
+  const storedCart = localStorage.getItem("cartCounts");
+  productCounts.value = storedCart ? JSON.parse(storedCart) : {};
+};
+
+const saveCartToStorage = () => {
+  localStorage.setItem("cartCounts", JSON.stringify(productCounts.value));
+};
 
 const totalPages = computed(() => {
   return Math.ceil(props.products.length / props.itemsPerPage);
@@ -125,31 +135,39 @@ const formattedPrice = (product) => {
   }
 };
 
-const increaseCount = (index) => {
-  if (!productCounts.value[index]) {
-    productCounts.value[index] = 1;
+const increaseCount = (productId) => {
+  if (!productCounts.value[productId]) {
+    productCounts.value[productId] = 1;
   } else {
-    productCounts.value[index]++;
+    productCounts.value[productId]++;
   }
-  productCounts.value = { ...productCounts.value };
+  saveCartToStorage();
 };
 
-const decreaseCount = (index) => {
-  if (productCounts.value[index] && productCounts.value[index] > 1) {
-    productCounts.value[index]--;
+const decreaseCount = (productId) => {
+  if (productCounts.value[productId] && productCounts.value[productId] > 1) {
+    productCounts.value[productId]--;
   } else {
-    delete productCounts.value[index];
+    delete productCounts.value[productId];
   }
+  saveCartToStorage();
 };
 
-const getCount = (index) => {
-  return productCounts.value[index] || 0;
+const getCount = (productId) => {
+  return productCounts.value[productId] || 0;
 };
 
-const addToCart = (product, index) => {
+const addToCart = (product) => {
   emit("add-to-cart", {
     product,
-    count: productCounts.value[index] || 1,
+    count: productCounts.value[product.id] || 1,
+  });
+  saveCartToStorage();
+  Swal.fire({
+    title: "Mahsulot qo'shildi!",
+    text: "Mahsulot savatchaga muvaffaqiyatli qo'shildi.",
+    icon: "success",
+    confirmButtonText: "OK",
   });
 };
 
@@ -168,6 +186,10 @@ const nextPage = () => {
 const setPage = (page) => {
   currentPage.value = page;
 };
+
+onMounted(() => {
+  loadCartFromStorage();
+});
 </script>
 
 <style scoped>

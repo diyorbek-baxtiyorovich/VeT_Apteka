@@ -9,20 +9,26 @@
             class="product-img w-full h-full object-contain"
           />
         </div>
+
         <div class="product-info-content py-4 px-7">
           <h1>{{ product.name }}</h1>
           <p class="mb-4 mt-2 text-gray-600 text-xl">
             {{ product.description.description }}
           </p>
+
           <p class="mb-4 text-xl">
             <strong class="text-red-600 text-2xl mr-1">Narx:</strong>
             {{ formattedPrice }}
+            <span
+              v-if="product.description.discount"
+              class="text-gray-400 line-through ml-2"
+            >
+              {{ product.description.price }} сум
+            </span>
           </p>
           <div class="flex justify-start items-center">
-            <div>
-              <button class="btn">Korzinkaga qo'shish</button>
-            </div>
-            <div class="counter ml-2">
+            <button class="btn" @click="addToCart">Korzinkaga qo'shish</button>
+            <div v-if="getCount > 0" class="counter ml-2 flex items-center">
               <button @click="decreaseCount" class="minus-btn">
                 <i class="fa-solid fa-minus"></i>
               </button>
@@ -36,19 +42,21 @@
           </div>
         </div>
       </div>
+
       <div v-else>
         <p>Mahsulot topilmadi</p>
       </div>
     </div>
+
     <ProductInfoItem />
   </div>
 </template>
-
 <script setup>
-import { ref, computed, onMounted } from "vue";
 import ProductInfoItem from "@/components/ui/ProductInfoItem.vue";
+import { ref, computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import { useCartStore } from "@/stores/counter";
+import Swal from "sweetalert2";
 
 const cartStore = useCartStore();
 const route = useRoute();
@@ -58,27 +66,29 @@ const products = ref([]);
 
 const formattedPrice = computed(() => {
   if (!product.value) return "";
-  const finalPrice =
-    product.value.description.price - (product.value.description.discount || 0);
+  const originalPrice = product.value.description.price;
+  const discount = product.value.description.discount || 0;
+  const finalPrice = originalPrice - discount;
   return `${finalPrice} сум`;
 });
 
 const getCount = computed(() => {
   const item = cartStore.cart.find((item) => item.id === product.value?.id);
-  return item ? item.count : 0;
+  return item ? item.quantity : 0;
 });
 
-const increaseCount = () => {
-  cartStore.addToCart(product.value, 1);
-};
-
-const decreaseCount = () => {
-  cartStore.removeFromCart(product.value.id);
-};
-
+// const addToCart = () => cartStore.addToCart(product.value, 1);
 const addToCart = () => {
   cartStore.addToCart(product.value, 1);
+  Swal.fire({
+    title: "Mahsulot qo'shildi!",
+    text: "Mahsulot savatchaga muvaffaqiyatli qo'shildi.",
+    icon: "success",
+    confirmButtonText: "OK",
+  });
 };
+const increaseCount = () => cartStore.addToCart(product.value, 1);
+const decreaseCount = () => cartStore.removeFromCart(product.value.id);
 
 const fetchProduct = async () => {
   try {
@@ -86,21 +96,16 @@ const fetchProduct = async () => {
     const data = await response.json();
     products.value = data;
     product.value = products.value.find((p) => p.id == route.params.id);
-    console.log("Mahsulot topilmadi:", product.value);
   } catch (error) {
     console.error("Mahsulotni yuklashda xatolik:", error);
   }
 };
 
-onMounted(() => {
-  fetchProduct();
-});
+onMounted(fetchProduct);
 </script>
-
 <style>
 .product-info {
   width: 100%;
-  height: auto;
   background-color: #f6f7fb;
   padding-top: 50px;
 }
@@ -109,12 +114,9 @@ onMounted(() => {
   margin: 0 auto;
   padding: 0 15px;
 }
-
 .product-info-wrapper {
   display: flex;
   gap: 20px;
-  width: 100%;
-  margin-top: 50px;
   background-color: #fff;
   border-radius: 30px;
   padding: 20px;
@@ -125,14 +127,12 @@ onMounted(() => {
 .product-info-content {
   width: 70%;
 }
-
 .product-info-image img {
   width: 100%;
   border-radius: 10px;
 }
 .product-info-content h1 {
   font-size: 2rem;
-  margin-bottom: 20px;
   font-weight: bold;
 }
 .btn {

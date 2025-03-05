@@ -48,12 +48,13 @@
         class="flex space-x-4 items-center text-lg font-semibold uppercase tracking-widest"
       >
         <li class="relative">
-          <router-link to="/korzinka">
-            <i class="fas fa-shopping-cart"></i>
+          <router-link to="/cart">
+            <i class="fas fa-shopping-cart text-2xl"></i>
             <span
-              class="absolute top-0 right-0 bg-red-500 text-white rounded-full w-4 h-4 flex justify-center items-center text-xs"
+              v-if="totalItems > 0"
+              class="absolute top-0 right-0 bg-red-500 text-white rounded-full w-5 h-5 flex justify-center items-center text-xs"
             >
-              0
+              {{ totalItems }}
             </span>
           </router-link>
         </li>
@@ -68,11 +69,15 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "AppNavbar",
-};
+<script setup>
+import { useCartStore } from "@/stores/counter";
+import { computed } from "vue";
+
+const cartStore = useCartStore();
+
+const totalItems = computed(() => cartStore.totalItems);
 </script>
+
 <style scoped>
 ul li:hover {
   color: white;

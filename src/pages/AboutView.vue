@@ -15,10 +15,14 @@
     <section>
       <AboutItemCart />
     </section>
+    <footer>
+      <HomeItemFooter />
+    </footer>
   </div>
 </template>
 
 <script setup>
+import HomeItemFooter from "@/components/common/HomeItemFooter.vue";
 import AboutItemCart from "@/components/ui/AboutItemCart.vue";
 </script>
 

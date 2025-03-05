@@ -30,30 +30,53 @@ const cartDataInfo = ref([
     name: "Mahsulot nomi 3",
     info: "About haqida ma'lumot 3",
   },
+  {
+    img: new URL("../../assets/cart (4).webp", import.meta.url).href,
+    name: "Mahsulot nomi 4",
+    info: "About haqida ma'lumot 4",
+  },
+  {
+    img: new URL("../../assets/cart (5).jpg", import.meta.url).href,
+    name: "Mahsulot nomi 5",
+    info: "About haqida ma'lumot 5",
+  },
 ]);
 </script>
 <style>
 .cart_about {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
 }
 
 .block_cart {
-  width: 350px;
-  height: 400px;
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 15px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .block_cart img {
   width: 100%;
-  height: 200px;
+  max-height: 200px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+.block_cart h1 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.block_cart p {
+  font-size: 14px;
+  color: #666;
 }
 </style>
