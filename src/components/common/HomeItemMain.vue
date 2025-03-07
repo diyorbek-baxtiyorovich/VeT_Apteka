@@ -1,6 +1,6 @@
-<template lang="">
+<template>
   <div>
-    <h1 class="text-white text-2xl max-w-2xl mx-auto mb-20 font-semibold">
+    <h1 class="text-white text-2xl max-w-2xl mx-auto font-semibold py-10">
       Pharmacy is a respected industry leader and trusted partner providing a
       comprehensive range of agricultural solutions.
     </h1>

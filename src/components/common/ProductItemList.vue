@@ -3,7 +3,10 @@
     <div v-if="paginatedProducts.length === 0" class="no-products">
       Elementlar topilmadi
     </div>
-    <div v-else class="grid grid-cols-4 gap-4">
+    <div
+      v-else
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+    >
       <div
         v-for="(product, index) in paginatedProducts"
         :key="index"
@@ -25,11 +28,13 @@
         </p>
         <p class="mt-2" v-html="formattedPrice(product)"></p>
         <div class="flex justify-center mt-4">
-          <div class="flex items-center bg-gray-100 p-5 rounded-xl shadow-md">
+          <div
+            class="flex items-center bg-gray-100 p-3 sm:p-5 rounded-xl shadow-md"
+          >
             <button @click="decreaseCount(product.id)" class="cursor-pointer">
               <i class="fa-solid fa-minus text-red-500"></i>
             </button>
-            <span class="text-xl font-semibold mx-4 w-8 text-center">
+            <span class="text-lg sm:text-xl font-semibold mx-4 w-8 text-center">
               {{ getCount(product.id) }}
             </span>
             <button @click="increaseCount(product.id)" class="cursor-pointer">
@@ -42,8 +47,11 @@
         </button>
       </div>
     </div>
-    <nav v-if="totalPages > 1" class="mt-4 flex justify-end">
-      <ul class="flex">
+    <nav
+      v-if="totalPages > 1"
+      class="mt-4 flex flex-wrap justify-center sm:justify-end"
+    >
+      <ul class="flex flex-wrap">
         <li>
           <button
             class="page-link rounded-lg px-4 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300 transition"

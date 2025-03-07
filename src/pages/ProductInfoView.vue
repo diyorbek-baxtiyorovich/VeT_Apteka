@@ -26,7 +26,7 @@
               {{ product.description.price }} сум
             </span>
           </p>
-          <div class="flex justify-start items-center">
+          <div class="flex flex-wrap justify-start items-center">
             <button class="btn" @click="addToCart">Korzinkaga qo'shish</button>
             <div v-if="getCount > 0" class="counter ml-2 flex items-center">
               <button @click="decreaseCount" class="minus-btn">
@@ -77,7 +77,6 @@ const getCount = computed(() => {
   return item ? item.quantity : 0;
 });
 
-// const addToCart = () => cartStore.addToCart(product.value, 1);
 const addToCart = () => {
   cartStore.addToCart(product.value, 1);
   Swal.fire({
@@ -110,29 +109,50 @@ onMounted(fetchProduct);
   padding-top: 50px;
 }
 .container {
-  width: 80%;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 .product-info-wrapper {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   background-color: #fff;
   border-radius: 30px;
   padding: 20px;
 }
+
+@media (min-width: 768px) {
+  .product-info-wrapper {
+    flex-direction: row;
+  }
+}
+
 .product-info-image {
-  width: 30%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .product-info-image {
+    width: 40%;
+  }
 }
 .product-info-content {
-  width: 70%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .product-info-content {
+    width: 60%;
+  }
 }
 .product-info-image img {
   width: 100%;
   border-radius: 10px;
 }
 .product-info-content h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: bold;
 }
 .btn {
