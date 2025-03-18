@@ -22,7 +22,7 @@
       type="text"
       class="border p-2 rounded w-full"
     />
-
+    <!-- hajmi -->
     <label class="block mt-2">Hajmi:</label>
     <input
       v-model="localFilters.volume"
