@@ -8,7 +8,7 @@
             Your order will be delivered as per the 'Estimated Delivery Date'
             committed at the time of order placement. You can check this by
             selecting your order from the "My Orders" section. Keep a lookout
-            for our order delivery updates.
+            for our order delivery updates. number
           </p>
         </div>
       </div>
